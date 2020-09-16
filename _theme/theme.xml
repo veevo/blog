@@ -658,6 +658,10 @@ body .navbar{
   font-size:1.4em;
 }
 
+.date-header span {
+  background-color: #8d82c4;
+}
+
 #main { 
    padding: 0 !important;
    margin: 0 !important;
@@ -781,7 +785,7 @@ div.PopularPosts h2 {
 }
 
 #l4u-header .logo {
-  background-color: #ededed;
+  background-color: #8d82c4;
   color: #1E273D;
   display: inline-block;
   padding: 0 .8em 0 1em;
@@ -1325,8 +1329,7 @@ Enlightening humanity through the lights of the immortal spirit
   &lt;a href=&quot;/p/contribute.html&quot;&gt;Contribute&lt;/a&gt; |
   &lt;a href=&quot;/p/privacy.html&quot;&gt;Privacy&lt;/a&gt; |
   &lt;a href=&quot;/p/about.html&quot;&gt;About Us&lt;/a&gt; |
-  &lt;a href=&quot;/p/contact.html&quot;&gt;Contact&lt;/a&gt; |
-  &lt;a href=&quot;//www.veevo.org&quot; target=&quot;_blank&quot;&gt;Veevo.org&lt;/a&gt; 
+  &lt;a href=&quot;/p/contact.html&quot;&gt;Contact&lt;/a&gt;
 &lt;/div&gt;
 &lt;/div&gt;</b:widget-setting>
           </b:widget-settings>
@@ -2775,7 +2778,9 @@ Enlightening humanity through the lights of the immortal spirit
 &lt;a href=&quot;/p/contribute.html&quot;&gt;Contribute&lt;/a&gt; |
 &lt;a href=&quot;/p/privacy.html&quot;&gt;Privacy&lt;/a&gt; |
 &lt;a href=&quot;/p/abouts.html&quot;&gt;About Us&lt;/a&gt; |
-&lt;a href=&quot;/p/contact.html&quot;&gt;Contact&lt;/a&gt;
+&lt;a href=&quot;/p/contact.html&quot;&gt;Contact&lt;/a&gt; |
+&lt;a href=&quot;/p/subscribe.html&quot;&gt;Subscribe&lt;/a&gt;  |
+&lt;a href=&quot;//www.veevo.org&quot; target=&quot;_blank&quot;&gt;Veevo.org&lt;/a&gt; 
  &lt;/p&gt;
 
 &lt;p&gt;

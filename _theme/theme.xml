@@ -424,26 +424,18 @@ h3.post-title, .comments h4 {
 }
 
 header {
-  /*
-  position: fixed;
-  left: 0;
-  width: 100%;
-*/
-  background-color: white;
-  display: block;
-  z-index: 999;
+  background-color: #2a2f4a;
   margin: 0;
-  padding: 2rem;
+  padding: 2rem 1rem 1rem 0;
   border-bottom: 1px solid #ccc;
-  margin-top: 2rem;
+  margin-top: 1rem;
   top: 0;
+  border-bottom: 5px solid #8d82c4;
 }
 
 .header-separator {
   background-color: #ededed;
-  background-image: repeating-linear-gradient(-45deg, #e5e5e5, #e5e5e5 1px, transparent 2px, transparent 7px);
   padding: 1rem;
-  border-top: 1px solid #ddd;
 }
 
 .mobile .header-separator {
@@ -616,9 +608,6 @@ body.mobile  {
 
 body {
     background-color: #ededed;
-    background-image: repeating-linear-gradient(-45deg, #e5e5e5, #e5e5e5 1px, transparent 2px, transparent 7px);
-    background-image: -moz-repeating-linear-gradient(-45deg, #e5e5e5, #e5e5e5 1px, transparent 2px, transparent 7px);
-    background-size: 10px 10px;
 }
 
 h1 {
@@ -777,13 +766,37 @@ div.PopularPosts h2 {
    font-size: 12px;
 }
 
-
 #l4u-header .alignleft a {
-  font-size: 1.6rem;
+  font-size: 1.2rem;
+}
+
+#l4u-header .alignright {
+  margin-top: 2rem;
+  text-transform: uppercase;
+}
+
+#l4u-header .alignright a{
+  color: #8d82c4;
+  padding-left: .5rem;
+}
+
+#l4u-header .logo {
+  background-color: #ededed;
+  color: #1E273D;
+  display: inline-block;
+  padding: 0 .8em 0 1em;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+}
+
+#l4u-header .desc {
+  color: white;
+  letter-spacing: 0.05em;
+  padding: 0.2em 1em;
 }
 
 .mobile header {
-  background-color: #06496b;
+  background-color: #2a2f4a;
   display: block;
   z-index: 999;
   margin: 0;
@@ -791,8 +804,12 @@ div.PopularPosts h2 {
   border-bottom: 0;
 }
 
+.mobile #l4u-header .alignright {
+  margin-top: 1em;
+}
+
 .mobile #l4u-header .alignleft a {
-    color: white;
+  font-size: 1rem;
 }
 
 .mobile header .alignright {
@@ -800,8 +817,8 @@ div.PopularPosts h2 {
   width: 100%;
   text-align: inherit;
   color: white;
-  background-color: #dedede;
-  padding: .4rem;
+  background-color: #ededed;
+  padding: .4rem 0;
 }
 
 .mobile header .alignleft {
@@ -809,6 +826,10 @@ div.PopularPosts h2 {
   width: 100%;
   color: white;
   padding: .5rem 0 0 .3rem;
+}
+
+.mobile #l4u-header .desc {
+  display:none;
 }
 
 .mobile div#FeaturedPost1 {
@@ -828,7 +849,7 @@ div.PopularPosts h2 {
 }
 
 .mobile #Label1 {
-  padding: 10px;
+  padding: 0 0 2rem 1rem;
 }
 
 .mobile #Label1 h2 {
@@ -1025,7 +1046,7 @@ br {
 
 #l4u-footer {
   padding: 1.5rem 0 2rem 0;
-  background: linear-gradient(to left, #6A737B, #535B61);
+  background: linear-gradient(to left, #8d82c4, #2a2f4a);
   color: #BEBEBE;
 }
 
@@ -1293,8 +1314,8 @@ head.appendChild(script);
           <b:widget-settings>
             <b:widget-setting name='content'>&lt;div id=&quot;l4u-header&quot;&gt;
  &lt;div class=&quot;alignleft&quot;&gt;
-  &lt;strong&gt;&lt;a href=&quot;/&quot;&gt;Veevo | Know Thyself&lt;/a&gt;&lt;/strong&gt;
-  &lt;div&gt;
+  &lt;a href=&quot;/&quot; class=&quot;logo&quot;&gt;Veevo | Blog&lt;/a&gt;
+  &lt;div class=&quot;desc&quot;&gt;
 Enlightening humanity through the lights of the immortal spirit
 &lt;/div&gt;
 &lt;/div&gt;
@@ -1304,7 +1325,8 @@ Enlightening humanity through the lights of the immortal spirit
   &lt;a href=&quot;/p/contribute.html&quot;&gt;Contribute&lt;/a&gt; |
   &lt;a href=&quot;/p/privacy.html&quot;&gt;Privacy&lt;/a&gt; |
   &lt;a href=&quot;/p/about.html&quot;&gt;About Us&lt;/a&gt; |
-  &lt;a href=&quot;/p/contact.html&quot;&gt;Contact&lt;/a&gt; 
+  &lt;a href=&quot;/p/contact.html&quot;&gt;Contact&lt;/a&gt; |
+  &lt;a href=&quot;//www.veevo.org&quot; target=&quot;_blank&quot;&gt;Veevo.org&lt;/a&gt; 
 &lt;/div&gt;
 &lt;/div&gt;</b:widget-setting>
           </b:widget-settings>

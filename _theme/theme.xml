@@ -3,6 +3,7 @@
 <html b:version='2' class='v2' expr:dir='data:blog.languageDirection' expr:lang='data:blog.locale' xmlns='http://www.w3.org/1999/xhtml' xmlns:b='http://www.google.com/2005/gml/b' xmlns:data='http://www.google.com/2005/gml/data' xmlns:expr='http://www.google.com/2005/gml/expr'>
   <head>
     <script async='async' src='https://www.googletagmanager.com/gtag/js?id=UA-1813817-2'/>
+    <script async='async' data-ad-client='ca-pub-3077963757260832' src='https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js'/>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
@@ -31,7 +32,7 @@
 
    <Group description="Page Text" selector="body">
      <Variable name="body.font" description="Font" type="font"
-         default="normal normal 12px Arial, Tahoma, Helvetica, FreeSans, sans-serif" value="normal normal 18px Roboto"/>
+         default="normal normal 12px Arial, Tahoma, Helvetica, FreeSans, sans-serif" value="normal normal 17px Lora"/>
      <Variable name="body.text.color" description="Text Color" type="color" default="#222222" value="#333333"/>
    </Group>
 
@@ -399,13 +400,7 @@ h3.post-title, .comments h4 {
 .post-body img, .post-body .tr-caption-container, .Profile img, .Image img,
 .BlogList .item-thumbnail img {
   padding: $(image.border.small.size);
-
   background: $(image.background.color);
-  border: 1px solid $(image.border.color);
-
-  -moz-box-shadow: 1px 1px 5px rgba(0, 0, 0, .1);
-  -webkit-box-shadow: 1px 1px 5px rgba(0, 0, 0, .1);
-  box-shadow: 1px 1px 5px rgba(0, 0, 0, .1);
 }
 
 .post-body .tr-caption-container {
@@ -426,9 +421,8 @@ h3.post-title, .comments h4 {
 header {
   background-color: #2a2f4a;
   margin: 0;
-  padding: 2rem 1rem 1rem 0;
+  padding: 3rem 1rem 1rem 0;
   border-bottom: 1px solid #ccc;
-  margin-top: 1rem;
   top: 0;
   border-bottom: 5px solid #8d82c4;
 }
@@ -610,37 +604,37 @@ body {
     background-color: #ededed;
 }
 
-h1 {
-   font-size: 2.2em;
+#navbg {
+  padding: 400px 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: linear-gradient(180deg, #2a2f4a, #2a2f4a, #8d82c4, #ededed);
 }
 
-h2{
+h1 {
+   font-size: 2em;
+}
+
+h2 {
    color: #444;
    margin:30px 0 10px 0;
-   font-size: 1.6em;
+   font-size: 1.4em;
 }
 
-h3,h4,h5{
+h3,h4,h5 {
    color: #444;
    margin: 28px 0 6px 0;
-   font-size: 1.4rem;
+   font-size: 1.35rem;
 }
 
-h3 {
-  font-size: 20px;
-}
-
-
-h4 {
-  font-size: 17px;
-}
-
-body .navbar{
+body .navbar {
   height:0px;
 }
 
 .post-body p {
-  margin-bottom: 2.2rem;
+  margin-bottom: 1.4rem;
 }
 
 .post-body ul {
@@ -676,7 +670,7 @@ body .navbar{
 }
 
 .post-body {
-    line-height: 1.8;
+    line-height: 1.6;
 }
 
 .header-inner .Header .titlewrapper{
@@ -689,7 +683,7 @@ body .navbar{
 
 blockquote {
    font-style: italic;
-   border-left: 3px solid #2288bb !important;
+   border-left: 3px solid #8d82c4 !important;
    padding-left: 20px;
    margin-bottom: 20px;
    font-family: Georgia, Times, serif;
@@ -736,7 +730,7 @@ div.PopularPosts h2 {
 .code {
     background-color: #f3f3f3;
     margin: 14px 0;
-    border-left: 3px solid #2288bb !important;
+    border-left: 3px solid #8d82c4 !important;
     padding: 14px;
     font-family: Courier New, Courier, Lucida Sans Typewriter, Lucida Typewriter, monospace;
     font-size: 15px; font-style: normal; font-variant: normal; font-weight: 400;
@@ -808,21 +802,38 @@ div.PopularPosts h2 {
   border-bottom: 0;
 }
 
+.mobile #l4u-header {
+  background-color: #2a2f4a;
+  margin: 0;
+  position: fixed;
+  text-transform: uppercase;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10000;
+  box-shadow: 0 0 0.25em 0 rgba(0, 0, 0, 0.15);
+}
+
 .mobile #l4u-header .alignright {
-  margin-top: 1em;
+  margin-top: .8em;
 }
 
 .mobile #l4u-header .alignleft a {
   font-size: 1rem;
+  padding: 0 .5em;
 }
 
 .mobile header .alignright {
+  background-color: #ededed;
   float: inherit;
   width: 100%;
   text-align: inherit;
   color: white;
-  background-color: #ededed;
-  padding: .4rem 0;
+  padding: .2rem .3em;
+}
+
+body.mobile {
+  padding-top: 50px;
 }
 
 .mobile header .alignleft {
@@ -919,7 +930,7 @@ br {
     padding: 10px;
     margin: 10px 0;
     width: 92%;
-    color: #2288bb;
+    color: #8d82c4;
     font-weight: 400;
     overflow: hidden;
     vertical-align: middle;
@@ -929,7 +940,7 @@ br {
 
 .tip:before {
     content: 'TIP: ';
-    color: #2288bb;
+    color: #8d82c4;
     padding: 3px 0;
     font-weight: 600;
 }
@@ -988,7 +999,7 @@ br {
 
 .subheader {
   font-family: Georgia, Times, serif;
-  font-size: 1em !important;
+  font-size: .9em !important;
   font-style: italic;
   color: #666;
   margin-bottom:1rem !important;
@@ -1050,12 +1061,13 @@ br {
 
 #l4u-footer {
   padding: 1.5rem 0 2rem 0;
-  background: linear-gradient(to left, #8d82c4, #2a2f4a);
+  background: linear-gradient(to left, #2a2f4a, #8d82c4, #2a2f4a);
   color: #BEBEBE;
 }
 
 .mobile #l4u-footer{
   padding-bottom: 2.3rem;
+  font-size: .9em;
 }
 
 #HTML6 .widget-content{
@@ -1119,20 +1131,36 @@ footer .widget{
     text-align: left;
 }
 .Label a {
-    color: #2288bb !important;
+    color: #8d82c4 !important;
+}
+
+a:link {
+  color: #8d82c4;
 }
 
 #my-form-button {
     background-color: white;
-    padding: .3rem 5rem;
-    border: 1px solid #2288bb;
-    color: #2288bb;
+    padding: .3rem 6rem;
+    border: 1px solid #8d82c4;
+    color: #8d82c4;
     font-weight: 600;
     font-size: 1rem;
 }
 
-]]></b:skin>
-    <b:template-skin>
+.sharethis-inline-share-buttons {
+  margin:2em 0;
+}
+
+td.tr-caption {
+  font-size: 70%;
+  font-style: italic;
+  font-family: Georgia, serif;
+}
+
+
+
+  ]]></b:skin>
+  <b:template-skin>
       <b:variable default='960px' name='content.width' type='length' value='1020px'/>
       <b:variable default='0' name='main.column.left.width' type='length' value='0px'/>
       <b:variable default='310px' name='main.column.right.width' type='length' value='280px'/>
@@ -1211,6 +1239,7 @@ footer .widget{
 
   </head>
   <body expr:class='&quot;loading&quot; + data:blog.mobileClass'>
+    <div id='navbg'/>
   <b:section class='navbar' id='navbar' maxwidgets='1' name='Navbar' showaddelement='no'>
     <b:widget id='Navbar1' locked='false' title='Navbar' type='Navbar' version='1'>
       <b:includable id='main'>&lt;script type=&quot;text/javascript&quot;&gt;
@@ -1229,7 +1258,7 @@ footer .widget{
       gapi.load(&quot;gapi.iframes:gapi.iframes.style.bubble&quot;, function() {
         if (gapi.iframes &amp;&amp; gapi.iframes.getContext) {
           gapi.iframes.getContext().openChild({
-              url: &#39;https://www.blogger.com/navbar.g?targetBlogID\x3d4302418731967922495\x26blogName\x3dVeevo\x26publishMode\x3dPUBLISH_MODE_HOSTED\x26navbarType\x3dDISABLED\x26layoutType\x3dLAYOUTS\x26searchRoot\x3dhttps://blog.veevo.org/search\x26blogLocale\x3den\x26v\x3d2\x26homepageUrl\x3dhttps://blog.veevo.org/\x26vt\x3d3871100927579751184&#39;,
+              url: &#39;https://www.blogger.com/navbar.g?targetBlogID\x3d4302418731967922495\x26blogName\x3dVeevo+Foundation\x26publishMode\x3dPUBLISH_MODE_HOSTED\x26navbarType\x3dDISABLED\x26layoutType\x3dLAYOUTS\x26searchRoot\x3dhttps://blog.veevo.org/search\x26blogLocale\x3den\x26v\x3d2\x26homepageUrl\x3dhttps://blog.veevo.org/\x26vt\x3d3871100927579751184&#39;,
               where: document.getElementById(&quot;navbar-iframe-container&quot;),
               id: &quot;navbar-iframe&quot;
           });
@@ -1318,17 +1347,15 @@ head.appendChild(script);
           <b:widget-settings>
             <b:widget-setting name='content'>&lt;div id=&quot;l4u-header&quot;&gt;
  &lt;div class=&quot;alignleft&quot;&gt;
-  &lt;a href=&quot;/&quot; class=&quot;logo&quot;&gt;Veevo | Blog&lt;/a&gt;
-  &lt;div class=&quot;desc&quot;&gt;
-Enlightening humanity through the lights of the immortal spirit
-&lt;/div&gt;
+  &lt;a href=&quot;/&quot; class=&quot;logo&quot;&gt;Veevo Foundation&lt;/a&gt;
+  &lt;div class=&quot;desc&quot;&gt;Know thyself&lt;/div&gt;
 &lt;/div&gt;
 
  &lt;div class=&quot;alignright&quot;&gt;
-  &lt;a href=&quot;/&quot;&gt;Home&lt;/a&gt; |
-  &lt;a href=&quot;/p/contribute.html&quot;&gt;Contribute&lt;/a&gt; |
-  &lt;a href=&quot;/p/privacy.html&quot;&gt;Privacy&lt;/a&gt; |
-  &lt;a href=&quot;/p/about.html&quot;&gt;About Us&lt;/a&gt; |
+  &lt;a href=&quot;/&quot;&gt;Home&lt;/a&gt;
+  &lt;a href=&quot;/p/contribute.html&quot;&gt;Contribute&lt;/a&gt;
+  &lt;a href=&quot;/p/privacy.html&quot;&gt;Privacy&lt;/a&gt;
+  &lt;a href=&quot;/p/about.html&quot;&gt;About Us&lt;/a&gt;
   &lt;a href=&quot;/p/contact.html&quot;&gt;Contact&lt;/a&gt;
 &lt;/div&gt;
 &lt;/div&gt;</b:widget-setting>
@@ -1366,16 +1393,7 @@ Enlightening humanity through the lights of the immortal spirit
     <div class='fauxborder-right tabs-fauxborder-right'/>
     <div class='region-inner tabs-inner'>
       <b:section class='tabs' id='crosscol' maxwidgets='1' name='Cross-Column' showaddelement='yes'/>
-      <b:section class='tabs' id='crosscol-overflow' name='Cross-Column 2' showaddelement='no'>
-        <b:widget id='AdSense1' locked='false' title='' type='AdSense'>
-          <b:includable id='main'>
-  <div class='widget-content'>
-    <data:adCode/>
-    <b:include name='quickedit'/>
-  </div>
-</b:includable>
-        </b:widget>
-      </b:section>
+      <b:section class='tabs' id='crosscol-overflow' name='Cross-Column 2' showaddelement='no'/>
     </div>
     </div>
     <div class='tabs-cap-bottom cap-bottom'>
@@ -1472,7 +1490,7 @@ Enlightening humanity through the lights of the immortal spirit
                 <b:widget-setting name='postsPerAd'>1</b:widget-setting>
                 <b:widget-setting name='showBacklinks'>false</b:widget-setting>
                 <b:widget-setting name='style.bordercolor'>#ffffff</b:widget-setting>
-                <b:widget-setting name='showInlineAds'>false</b:widget-setting>
+                <b:widget-setting name='showInlineAds'>true</b:widget-setting>
                 <b:widget-setting name='showReactions'>false</b:widget-setting>
               </b:widget-settings>
               <b:includable id='main' var='top'>
@@ -2327,8 +2345,7 @@ Enlightening humanity through the lights of the immortal spirit
             </b:widget>
             <b:widget id='HTML4' locked='false' mobile='yes' title='' type='HTML'>
               <b:widget-settings>
-                <b:widget-setting name='content'>&lt;h3&gt;Share:&lt;/h3&gt;
-&lt;div class=&quot;sharethis-inline-share-buttons&quot;&gt;&lt;/div&gt;</b:widget-setting>
+                <b:widget-setting name='content'><![CDATA[<div class="sharethis-inline-share-buttons"></div>]]></b:widget-setting>
               </b:widget-settings>
               <b:includable id='main'>
   <!-- only display title if it's non-empty -->
@@ -2340,31 +2357,6 @@ Enlightening humanity through the lights of the immortal spirit
   </div>
 
   <b:include name='quickedit'/>
-</b:includable>
-            </b:widget>
-            <b:widget id='HTML3' locked='false' mobile='yes' title='' type='HTML'>
-              <b:widget-settings>
-                <b:widget-setting name='content'>&lt;div class=&quot;subheader my2&quot;&gt;Any comment about this page? Please &lt;a href=&quot;https://twitter.com/linux4us1&quot; target=&quot;_blank&quot;&gt;contact us on Twitter&lt;/a&gt;
-&lt;/div&gt;</b:widget-setting>
-              </b:widget-settings>
-              <b:includable id='main'>
-  <!-- only display title if it's non-empty -->
-  <b:if cond='data:title != &quot;&quot;'>
-    <h2 class='title'><data:title/></h2>
-  </b:if>
-  <div class='widget-content'>
-    <data:content/>
-  </div>
-
-  <b:include name='quickedit'/>
-</b:includable>
-            </b:widget>
-            <b:widget id='AdSense2' locked='false' title='' type='AdSense'>
-              <b:includable id='main'>
-  <div class='widget-content'>
-    <data:adCode/>
-    <b:include name='quickedit'/>
-  </div>
 </b:includable>
             </b:widget>
             <b:widget id='FeaturedPost1' locked='false' mobile='yes' title='Featured Article' type='FeaturedPost'>
@@ -2579,10 +2571,101 @@ Enlightening humanity through the lights of the immortal spirit
     <b:include name='quickedit'/>
   </b:includable>
   </b:widget>
+  <b:widget id='FollowByEmail1' locked='false' title='Follow by Email' type='FollowByEmail'>
+    <b:includable id='main'>
+  <b:if cond='data:title != &quot;&quot;'><h2 class='title'><data:title/></h2></b:if>
+  <div class='widget-content'>
+    <div class='follow-by-email-inner'>
+      <form action='https://feedburner.google.com/fb/a/mailverify' expr:onsubmit='&quot;window.open(\&quot;https://feedburner.google.com/fb/a/mailverify?uri=&quot; + data:feedPath + &quot;\&quot;, \&quot;popupwindow\&quot;, \&quot;scrollbars=yes,width=550,height=520\&quot;); return true&quot;' method='post' target='popupwindow'>
+        <table width='100%'>
+          <tr>
+            <td>
+              <input class='follow-by-email-address' name='email' placeholder='Email address...' type='text'/>
+            </td>
+            <td width='64px'>
+              <input class='follow-by-email-submit' type='submit' value='Submit'/>
+            </td>
+          </tr>
+        </table>
+        <input expr:value='data:feedPath' name='uri' type='hidden'/>
+        <input name='loc' type='hidden' value='en_US'/>
+      </form>
+    </div>
+  </div>
+  <span class='item-control blog-admin'>
+    <b:include name='quickedit'/>
+  </span>
+</b:includable>
+  </b:widget>
   <b:widget id='HTML7' locked='false' title='' type='HTML'>
     <b:widget-settings>
       <b:widget-setting name='content'>&lt;h2&gt;Follow Us&lt;/h2&gt;
 &lt;div class=&quot;sharethis-inline-follow-buttons&quot;&gt;&lt;/div&gt;</b:widget-setting>
+    </b:widget-settings>
+    <b:includable id='main'>
+  <!-- only display title if it's non-empty -->
+  <b:if cond='data:title != &quot;&quot;'>
+    <h2 class='title'><data:title/></h2>
+  </b:if>
+  <div class='widget-content'>
+    <data:content/>
+  </div>
+
+  <b:include name='quickedit'/>
+</b:includable>
+  </b:widget>
+  <b:widget id='PopularPosts1' locked='false' title='Popular this Week' type='PopularPosts'>
+    <b:widget-settings>
+      <b:widget-setting name='numItemsToShow'>10</b:widget-setting>
+      <b:widget-setting name='showThumbnails'>true</b:widget-setting>
+      <b:widget-setting name='showSnippets'>true</b:widget-setting>
+      <b:widget-setting name='timeRange'>LAST_WEEK</b:widget-setting>
+    </b:widget-settings>
+    <b:includable id='main'>
+  <b:if cond='data:title != &quot;&quot;'><h2><data:title/></h2></b:if>
+  <div class='widget-content popular-posts'>
+    <ul>
+      <b:loop values='data:posts' var='post'>
+      <li>
+        <b:if cond='!data:showThumbnails'>
+          <b:if cond='!data:showSnippets'>
+            <!-- (1) No snippet/thumbnail -->
+            <a expr:href='data:post.href'><data:post.title/></a>
+          <b:else/>
+            <!-- (2) Show only snippets -->
+            <div class='item-title'><a expr:href='data:post.href'><data:post.title/></a></div>
+            <div class='item-snippet'><data:post.snippet/></div>
+          </b:if>
+        <b:else/>
+          <!-- (3) Show only thumbnails or (4) Snippets and thumbnails. -->
+          <div expr:class='data:showSnippets ? &quot;item-content&quot; : &quot;item-thumbnail-only&quot;'>
+            <b:if cond='data:post.featuredImage.isResizable or data:post.thumbnail'>
+              <div class='item-thumbnail'>
+                <a expr:href='data:post.href' target='_blank'>
+                  <b:with value='data:post.featuredImage.isResizable                                  ? resizeImage(data:post.featuredImage, 72, &quot;1:1&quot;)                                  : data:post.thumbnail' var='image'>
+                    <img alt='' border='0' expr:src='data:image'/>
+                  </b:with>
+                </a>
+              </div>
+            </b:if>
+            <div class='item-title'><a expr:href='data:post.href'><data:post.title/></a></div>
+            <b:if cond='data:showSnippets'>
+              <div class='item-snippet'><data:post.snippet/></div>
+            </b:if>
+          </div>
+          <div style='clear: both;'/>
+        </b:if>
+      </li>
+      </b:loop>
+    </ul>
+    <b:include name='quickedit'/>
+  </div>
+</b:includable>
+  </b:widget>
+  <b:widget id='HTML2' locked='false' title='' type='HTML'>
+    <b:widget-settings>
+      <b:widget-setting name='content'>&lt;h4&gt;Recent Tweets&lt;/h4&gt;
+&lt;a class=&quot;twitter-timeline&quot; data-width=&quot;500&quot; data-height=&quot;300&quot; data-tweet-limit=&quot;3&quot; data-chrome=&quot;noheader nofooter noborders&quot; href=&quot;https://twitter.com/VeevoFoundation?ref_src=twsrc%5Etfw&quot;&gt;&lt;/a&gt; &lt;script async=&quot;async&quot; src=&quot;https://platform.twitter.com/widgets.js&quot; charset=&quot;utf-8&quot; &gt;&lt;/script&gt;</b:widget-setting>
     </b:widget-settings>
     <b:includable id='main'>
   <!-- only display title if it's non-empty -->
@@ -2642,79 +2725,6 @@ Enlightening humanity through the lights of the immortal spirit
   </div>
 </b:includable>
   </b:widget>
-  <b:widget id='PopularPosts1' locked='false' title='Popular this Week' type='PopularPosts'>
-    <b:widget-settings>
-      <b:widget-setting name='numItemsToShow'>10</b:widget-setting>
-      <b:widget-setting name='showThumbnails'>true</b:widget-setting>
-      <b:widget-setting name='showSnippets'>true</b:widget-setting>
-      <b:widget-setting name='timeRange'>LAST_WEEK</b:widget-setting>
-    </b:widget-settings>
-    <b:includable id='main'>
-  <b:if cond='data:title != &quot;&quot;'><h2><data:title/></h2></b:if>
-  <div class='widget-content popular-posts'>
-    <ul>
-      <b:loop values='data:posts' var='post'>
-      <li>
-        <b:if cond='!data:showThumbnails'>
-          <b:if cond='!data:showSnippets'>
-            <!-- (1) No snippet/thumbnail -->
-            <a expr:href='data:post.href'><data:post.title/></a>
-          <b:else/>
-            <!-- (2) Show only snippets -->
-            <div class='item-title'><a expr:href='data:post.href'><data:post.title/></a></div>
-            <div class='item-snippet'><data:post.snippet/></div>
-          </b:if>
-        <b:else/>
-          <!-- (3) Show only thumbnails or (4) Snippets and thumbnails. -->
-          <div expr:class='data:showSnippets ? &quot;item-content&quot; : &quot;item-thumbnail-only&quot;'>
-            <b:if cond='data:post.featuredImage.isResizable or data:post.thumbnail'>
-              <div class='item-thumbnail'>
-                <a expr:href='data:post.href' target='_blank'>
-                  <b:with value='data:post.featuredImage.isResizable                                  ? resizeImage(data:post.featuredImage, 72, &quot;1:1&quot;)                                  : data:post.thumbnail' var='image'>
-                    <img alt='' border='0' expr:src='data:image'/>
-                  </b:with>
-                </a>
-              </div>
-            </b:if>
-            <div class='item-title'><a expr:href='data:post.href'><data:post.title/></a></div>
-            <b:if cond='data:showSnippets'>
-              <div class='item-snippet'><data:post.snippet/></div>
-            </b:if>
-          </div>
-          <div style='clear: both;'/>
-        </b:if>
-      </li>
-      </b:loop>
-    </ul>
-    <b:include name='quickedit'/>
-  </div>
-</b:includable>
-  </b:widget>
-  <b:widget id='AdSense3' locked='false' title='' type='AdSense'>
-    <b:includable id='main'>
-  <div class='widget-content'>
-    <data:adCode/>
-    <b:include name='quickedit'/>
-  </div>
-</b:includable>
-  </b:widget>
-  <b:widget id='HTML2' locked='false' title='' type='HTML'>
-    <b:widget-settings>
-      <b:widget-setting name='content'>&lt;h4&gt;Recent Tweets&lt;/h4&gt;
-&lt;a class=&quot;twitter-timeline&quot; data-width=&quot;500&quot; data-height=&quot;300&quot; data-tweet-limit=&quot;3&quot; data-chrome=&quot;noheader nofooter noborders&quot; href=&quot;https://twitter.com/VeevoFoundation?ref_src=twsrc%5Etfw&quot;&gt;&lt;/a&gt; &lt;script async=&quot;async&quot; src=&quot;https://platform.twitter.com/widgets.js&quot; charset=&quot;utf-8&quot; &gt;&lt;/script&gt;</b:widget-setting>
-    </b:widget-settings>
-    <b:includable id='main'>
-  <!-- only display title if it's non-empty -->
-  <b:if cond='data:title != &quot;&quot;'>
-    <h2 class='title'><data:title/></h2>
-  </b:if>
-  <div class='widget-content'>
-    <data:content/>
-  </div>
-
-  <b:include name='quickedit'/>
-</b:includable>
-  </b:widget>
   <b:widget id='BlogSearch2' locked='false' title='Search' type='BlogSearch'>
     <b:includable id='main'>
     <!-- only display title if it's non-empty -->
@@ -2745,36 +2755,10 @@ Enlightening humanity through the lights of the immortal spirit
     <b:include name='quickedit'/>
   </b:includable>
   </b:widget>
-  <b:widget id='FollowByEmail1' locked='false' title='Follow by Email' type='FollowByEmail'>
-    <b:includable id='main'>
-  <b:if cond='data:title != &quot;&quot;'><h2 class='title'><data:title/></h2></b:if>
-  <div class='widget-content'>
-    <div class='follow-by-email-inner'>
-      <form action='https://feedburner.google.com/fb/a/mailverify' expr:onsubmit='&quot;window.open(\&quot;https://feedburner.google.com/fb/a/mailverify?uri=&quot; + data:feedPath + &quot;\&quot;, \&quot;popupwindow\&quot;, \&quot;scrollbars=yes,width=550,height=520\&quot;); return true&quot;' method='post' target='popupwindow'>
-        <table width='100%'>
-          <tr>
-            <td>
-              <input class='follow-by-email-address' name='email' placeholder='Email address...' type='text'/>
-            </td>
-            <td width='64px'>
-              <input class='follow-by-email-submit' type='submit' value='Submit'/>
-            </td>
-          </tr>
-        </table>
-        <input expr:value='data:feedPath' name='uri' type='hidden'/>
-        <input name='loc' type='hidden' value='en_US'/>
-      </form>
-    </div>
-  </div>
-  <span class='item-control blog-admin'>
-    <b:include name='quickedit'/>
-  </span>
-</b:includable>
-  </b:widget>
 </b:section-contents><b:section-contents id='footer-1'>
   <b:widget id='HTML6' locked='false' mobile='yes' title='' type='HTML'>
     <b:widget-settings>
-      <b:widget-setting name='content'><![CDATA[Is this website helpful to you? Please consider sharing posts and <a href="/p/contact.html">sending your feedback</a>. Thanks!]]></b:widget-setting>
+      <b:widget-setting name='content'><![CDATA[Is this website helpful to you? Please consider sharing posts, <a href="/p/contact.html">contacting us</a> or reaching out <a href="https://twitter.com/veevofoundation" target="_blank">on Twitter</a>. Thanks!]]></b:widget-setting>
     </b:widget-settings>
     <b:includable id='main'>
   <!-- only display title if it's non-empty -->
@@ -2792,20 +2776,25 @@ Enlightening humanity through the lights of the immortal spirit
     <b:widget-settings>
       <b:widget-setting name='content'>&lt;div id=&quot;l4u-footer&quot;&gt;
  &lt;p&gt;
-&lt;a href=&quot;/&quot;&gt;Home&lt;/a&gt; |
-&lt;a href=&quot;/p/contribute.html&quot;&gt;Contribute&lt;/a&gt; |
-&lt;a href=&quot;/p/privacy.html&quot;&gt;Privacy&lt;/a&gt; |
-&lt;a href=&quot;/p/abouts.html&quot;&gt;About Us&lt;/a&gt; |
-&lt;a href=&quot;/p/contact.html&quot;&gt;Contact&lt;/a&gt; |
+&lt;a href=&quot;/&quot;&gt;Home&lt;/a&gt; | 
+&lt;a href=&quot;/p/contribute.html&quot;&gt;Contribute&lt;/a&gt; | 
+&lt;a href=&quot;/p/privacy.html&quot;&gt;Privacy&lt;/a&gt; | 
+&lt;a href=&quot;/p/abouts.html&quot;&gt;About Us&lt;/a&gt; | 
+&lt;a href=&quot;/p/contact.html&quot;&gt;Contact&lt;/a&gt; |  
+&lt;a href=&quot;//github.com/veevo&quot; target=&quot;_blank&quot;&gt;GitHub&lt;/a&gt; |
+&lt;a href=&quot;//twitter.com/veevofoundation&quot; target=&quot;_blank&quot;&gt;Twitter&lt;/a&gt; |
+&lt;a href=&quot;//blog.veevo.org/feeds/posts/default&quot; target=&quot;_blank&quot;&gt;RSS&lt;/a&gt; |
 &lt;a href=&quot;//www.veevo.org&quot; target=&quot;_blank&quot;&gt;Veevo.org&lt;/a&gt; 
  &lt;/p&gt;
 
 &lt;p&gt;
-Veevo | Enlightening humanity through the lights of the immortal spirit
+Veevo Foundation | Know thyself
 &lt;/p&gt;
 
- &lt;p&gt;2020 &#169; &lt;a href=&quot;//www.veevo.org&quot; target=&quot;_blank&quot;&gt;Veevo Foundation&lt;/a&gt;&lt;/p&gt;
+ &lt;p&gt;2020 &#169; &lt;a href=&quot;//www.veevo.org&quot;&gt;Veevo Foundation&lt;/a&gt;
+&lt;/p&gt;
 
+&lt;p&gt; Made with &#9829; in Canada&lt;/p&gt;
 
 &lt;/div&gt;</b:widget-setting>
     </b:widget-settings>

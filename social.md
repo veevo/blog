@@ -18,3 +18,7 @@ One day, a soul awakens and delights itself with the morning that stretches on t
 It remembers being the daughter of a loving Father, a Creator who provides everything for everyone.
 #meditate #peace #life #Happiness #family #love
 https://blog.veevo.org/2020/10/a-poem-to-god.html
+
+How far can your work, your thoughts and your habits take you?
+#meditate #peace #life #Happiness #family #love
+https://blog.veevo.org/2020/10/a-transformative-power.html

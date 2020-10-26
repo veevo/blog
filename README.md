@@ -6,6 +6,7 @@ Read our blog at [blog.veevo.org](https://blog.veevo.org)
 
 ## Published posts
 Our currently published posts:
+* [A Transformative Power](https://blog.veevo.org/2020/10/a-transformative-power.html)
 * [A Poem to God](https://blog.veevo.org/2020/10/a-poem-to-god.html)
 * [Bridge of Life](https://blog.veevo.org/2020/10/bridge-of-life.html)
 * [Bridge of Life](https://blog.veevo.org/2020/10/bridge-of-life.html)

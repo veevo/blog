@@ -634,7 +634,7 @@ body .navbar {
 }
 
 .post-body p {
-  margin-bottom: 1.4rem;
+  margin-bottom: 1.6rem;
 }
 
 .post-body ul {
@@ -1157,9 +1157,15 @@ td.tr-caption {
   font-family: Georgia, serif;
 }
 
+.rss {
+  background-color: #f57c00;
+  color: #white;
+  display: inline-block;
+  padding: 0 .8em;
+  margin-left: .8em;
+}
 
-
-  ]]></b:skin>
+]]></b:skin>
   <b:template-skin>
       <b:variable default='960px' name='content.width' type='length' value='1020px'/>
       <b:variable default='0' name='main.column.left.width' type='length' value='0px'/>
@@ -1357,6 +1363,7 @@ head.appendChild(script);
   &lt;a href=&quot;/p/privacy.html&quot;&gt;Privacy&lt;/a&gt;
   &lt;a href=&quot;/p/about.html&quot;&gt;About Us&lt;/a&gt;
   &lt;a href=&quot;/p/contact.html&quot;&gt;Contact&lt;/a&gt;
+  &lt;a href=&quot;https:/feeds/posts/default&quot; class=&quot;rss&quot; target=&quot;_blank&quot;&gt;RSS&lt;/a&gt;
 &lt;/div&gt;
 &lt;/div&gt;</b:widget-setting>
           </b:widget-settings>
@@ -2782,9 +2789,7 @@ head.appendChild(script);
 &lt;a href=&quot;/p/abouts.html&quot;&gt;About Us&lt;/a&gt; | 
 &lt;a href=&quot;/p/contact.html&quot;&gt;Contact&lt;/a&gt; |  
 &lt;a href=&quot;//github.com/veevo&quot; target=&quot;_blank&quot;&gt;GitHub&lt;/a&gt; |
-&lt;a href=&quot;//twitter.com/veevofoundation&quot; target=&quot;_blank&quot;&gt;Twitter&lt;/a&gt; |
-&lt;a href=&quot;//blog.veevo.org/feeds/posts/default&quot; target=&quot;_blank&quot;&gt;RSS&lt;/a&gt; |
-&lt;a href=&quot;//www.veevo.org&quot; target=&quot;_blank&quot;&gt;Veevo.org&lt;/a&gt; 
+&lt;a href=&quot;//twitter.com/veevofoundation&quot; target=&quot;_blank&quot;&gt;Twitter&lt;/a&gt; |&lt;a href=&quot;https:/feeds/posts/default&quot; class=&quot;rss&quot; target=&quot;_blank&quot;&gt;RSS&lt;/a&gt;
  &lt;/p&gt;
 
 &lt;p&gt;

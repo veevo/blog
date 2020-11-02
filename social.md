@@ -22,3 +22,7 @@ https://blog.veevo.org/2020/10/a-poem-to-god.html
 How far can your work, your thoughts and your habits take you?
 #meditate #peace #life #Happiness #family #love
 https://blog.veevo.org/2020/10/a-transformative-power.html
+
+Can distinguished personalities recognize the existence of a greater good?
+#meditate #peace #life #Happiness #family #love #god
+https://blog.veevo.org/2020/11/a-thinking-power.html

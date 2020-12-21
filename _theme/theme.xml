@@ -32,7 +32,7 @@
 
    <Group description="Page Text" selector="body">
      <Variable name="body.font" description="Font" type="font"
-         default="normal normal 12px Arial, Tahoma, Helvetica, FreeSans, sans-serif" value="normal normal 17px Lora"/>
+         default="normal normal 12px Arial, Tahoma, Helvetica, FreeSans, sans-serif" value="normal normal 18px Lora"/>
      <Variable name="body.text.color" description="Text Color" type="color" default="#222222" value="#333333"/>
    </Group>
 
@@ -186,6 +186,7 @@ body {
   color: $(body.text.color);
   background: $(body.background);
   padding: 0 $(content.shadow.spread) $(content.shadow.spread) $(content.shadow.spread);
+  font-family: serif;
   $(body.background.override)
 }
 
@@ -193,10 +194,6 @@ html body $(page.width.selector) {
   min-width: 0;
   max-width: 100%;
   width: $(page.width);
-}
-
-h2 {
-  font-size: 22px;
 }
 
 a:link {
@@ -614,13 +611,13 @@ body {
 }
 
 h1 {
-   font-size: 2em;
+   font-size: 2.2em;
 }
 
 h2 {
    color: #444;
    margin:30px 0 10px 0;
-   font-size: 1.4em;
+   font-size: 1.8em;
 }
 
 h3,h4,h5 {
@@ -746,6 +743,11 @@ div.PopularPosts h2 {
    margin: 0px
 }
 
+.mobile .item-thumbnail {
+  float: left;
+  padding-right: 1em;
+}
+
 .widget {
   margin: 20px 0;
 }
@@ -753,11 +755,6 @@ div.PopularPosts h2 {
 .widget ul {
   padding: 0px;
   list-style: none;
-}
-
-#PopularPosts1, #PopularPosts2 {
-   border-bottom: 1px solid #dddddd;
-   height: 500px
 }
 
 .item-snippet {
@@ -899,6 +896,10 @@ body.mobile {
   max-width: 100%;
   display: block;
   margin: 0 auto;
+}
+
+#PopularPosts2 {
+  padding: 0 1em;
 }
 
 .post-body {
@@ -1159,15 +1160,19 @@ td.tr-caption {
 
 .rss {
   background-color: #f57c00;
-  color: #white;
+  color: white !important;
   display: inline-block;
   padding: 0 .8em;
   margin-left: .8em;
 }
 
+.cloud-label-widget-content {
+  word-spacing: .5em;
+}
+
 ]]></b:skin>
   <b:template-skin>
-      <b:variable default='960px' name='content.width' type='length' value='1020px'/>
+      <b:variable default='960px' name='content.width' type='length' value='1060px'/>
       <b:variable default='0' name='main.column.left.width' type='length' value='0px'/>
       <b:variable default='310px' name='main.column.right.width' type='length' value='280px'/>
 
@@ -2405,6 +2410,54 @@ head.appendChild(script);
   </style>
 </b:includable>
             </b:widget>
+            <b:widget id='PopularPosts2' locked='false' mobile='yes' title='Popular this Week' type='PopularPosts'>
+              <b:widget-settings>
+                <b:widget-setting name='numItemsToShow'>5</b:widget-setting>
+                <b:widget-setting name='showThumbnails'>true</b:widget-setting>
+                <b:widget-setting name='showSnippets'>true</b:widget-setting>
+                <b:widget-setting name='timeRange'>LAST_MONTH</b:widget-setting>
+              </b:widget-settings>
+              <b:includable id='main'>
+  <b:if cond='data:title != &quot;&quot;'><h2><data:title/></h2></b:if>
+  <div class='widget-content popular-posts'>
+    <ul>
+      <b:loop values='data:posts' var='post'>
+      <li>
+        <b:if cond='!data:showThumbnails'>
+          <b:if cond='!data:showSnippets'>
+            <!-- (1) No snippet/thumbnail -->
+            <a expr:href='data:post.href'><data:post.title/></a>
+          <b:else/>
+            <!-- (2) Show only snippets -->
+            <div class='item-title'><a expr:href='data:post.href'><data:post.title/></a></div>
+            <div class='item-snippet'><data:post.snippet/></div>
+          </b:if>
+        <b:else/>
+          <!-- (3) Show only thumbnails or (4) Snippets and thumbnails. -->
+          <div expr:class='data:showSnippets ? &quot;item-content&quot; : &quot;item-thumbnail-only&quot;'>
+            <b:if cond='data:post.featuredImage.isResizable or data:post.thumbnail'>
+              <div class='item-thumbnail'>
+                <a expr:href='data:post.href' target='_blank'>
+                  <b:with value='data:post.featuredImage.isResizable                                  ? resizeImage(data:post.featuredImage, 72, &quot;1:1&quot;)                                  : data:post.thumbnail' var='image'>
+                    <img alt='' border='0' expr:src='data:image'/>
+                  </b:with>
+                </a>
+              </div>
+            </b:if>
+            <div class='item-title'><a expr:href='data:post.href'><data:post.title/></a></div>
+            <b:if cond='data:showSnippets'>
+              <div class='item-snippet'><data:post.snippet/></div>
+            </b:if>
+          </div>
+          <div style='clear: both;'/>
+        </b:if>
+      </li>
+      </b:loop>
+    </ul>
+    <b:include name='quickedit'/>
+  </div>
+</b:includable>
+            </b:widget>
           </b:section>
         </div>
         </div>
@@ -2623,10 +2676,10 @@ head.appendChild(script);
   </b:widget>
   <b:widget id='PopularPosts1' locked='false' title='Popular this Week' type='PopularPosts'>
     <b:widget-settings>
-      <b:widget-setting name='numItemsToShow'>10</b:widget-setting>
+      <b:widget-setting name='numItemsToShow'>5</b:widget-setting>
       <b:widget-setting name='showThumbnails'>true</b:widget-setting>
       <b:widget-setting name='showSnippets'>true</b:widget-setting>
-      <b:widget-setting name='timeRange'>LAST_WEEK</b:widget-setting>
+      <b:widget-setting name='timeRange'>LAST_MONTH</b:widget-setting>
     </b:widget-settings>
     <b:includable id='main'>
   <b:if cond='data:title != &quot;&quot;'><h2><data:title/></h2></b:if>
@@ -2672,7 +2725,7 @@ head.appendChild(script);
   <b:widget id='HTML2' locked='false' title='' type='HTML'>
     <b:widget-settings>
       <b:widget-setting name='content'>&lt;h4&gt;Recent Tweets&lt;/h4&gt;
-&lt;a class=&quot;twitter-timeline&quot; data-width=&quot;500&quot; data-height=&quot;300&quot; data-tweet-limit=&quot;3&quot; data-chrome=&quot;noheader nofooter noborders&quot; href=&quot;https://twitter.com/VeevoFoundation?ref_src=twsrc%5Etfw&quot;&gt;&lt;/a&gt; &lt;script async=&quot;async&quot; src=&quot;https://platform.twitter.com/widgets.js&quot; charset=&quot;utf-8&quot; &gt;&lt;/script&gt;</b:widget-setting>
+&lt;a class=&quot;twitter-timeline&quot; data-width=&quot;500&quot; data-height=&quot;300&quot; data-tweet-limit=&quot;2&quot; data-chrome=&quot;noheader nofooter noborders&quot; href=&quot;https://twitter.com/VeevoFoundation?ref_src=twsrc%5Etfw&quot;&gt;&lt;/a&gt; &lt;script async=&quot;async&quot; src=&quot;https://platform.twitter.com/widgets.js&quot; charset=&quot;utf-8&quot; &gt;&lt;/script&gt;</b:widget-setting>
     </b:widget-settings>
     <b:includable id='main'>
   <!-- only display title if it's non-empty -->
@@ -2692,7 +2745,7 @@ head.appendChild(script);
       <b:widget-setting name='display'>CLOUD</b:widget-setting>
       <b:widget-setting name='selectedLabelsList'/>
       <b:widget-setting name='showType'>ALL</b:widget-setting>
-      <b:widget-setting name='showFreqNumbers'>true</b:widget-setting>
+      <b:widget-setting name='showFreqNumbers'>false</b:widget-setting>
     </b:widget-settings>
     <b:includable id='main'>
   <b:if cond='data:title != &quot;&quot;'>
